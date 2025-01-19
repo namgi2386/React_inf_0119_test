@@ -6,6 +6,9 @@ import { lazy , Suspense } from 'react';
 import Home from './pages/Home';
 import Loading from './components/common/Loading';
 import Notfound from './pages/Notfound';
+import {getTestImage} from './util/get-test-image';
+
+
 
 // 자주 사용하지 않는 페이지는 lazy 로드
 const Diary = lazy(() => import('./pages/Diary'));
@@ -20,6 +23,11 @@ function App() {
   return (
     <RecoilRoot>
       <Suspense fallback={<Loading/>}>
+        <div>
+          <img src={getTestImage(1)}/>
+          <img src={getTestImage(4)}/>
+          <img src={getTestImage(2)}/>
+        </div>
         <div>
           <Link to={"/"}>Home</Link>
           <Link to={"/new"}>New</Link>

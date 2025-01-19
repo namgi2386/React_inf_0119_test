@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "CookieRun";
+  src: url("/public/fonts/CookieRun-Regular.ttf" ) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Chosun";
+  src: url("/public/fonts/ChosunCentennial.ttf");
+}
+
+html, body {
+  margin: 0px;
+  width: 100%;
+  background-color: rgb(246, 246, 246)
+}
+
+#root {
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  height: 100%;
+}
+
+body * {
+  font-family: "CookieRun";
+}
